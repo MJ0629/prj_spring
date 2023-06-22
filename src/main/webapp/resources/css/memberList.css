@@ -1,0 +1,283 @@
+@charset "utf-8";
+    *{margin: 0; padding: 0; border: 0;}
+    ul {list-style: none;}
+    a {text-decoration: none; color: inherit;}
+    @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+    
+    /* .nanumgothic * {
+    font-family: 'Nanum Gothic', sans-serif;
+    } */
+
+    /* css 초기화 */
+
+
+    /* 전체 영역 */
+    html,body {
+        height: 100%;
+        font-family: 'Nanum Gothic', sans-serif;
+    }
+
+    .container-wrap {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    /* 전체 영역 */
+
+
+    /* 헤더 영역 */
+    .headerNav li:not(:first-child) a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: #777;
+    }
+    /* 헤더 영역 */
+
+
+    /* 왼쪽 측면 사이드 메뉴 */
+    .left-side {
+        width: 20%;
+        height: 75.15vh;
+        margin: 0;
+        background-color: #fff;
+        box-sizing: border-box;
+        padding: 8vh 0 10vh 6vh;
+        color: #777;
+        position: relative;
+        z-index: 1;
+    }
+    .left-side li a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 1vh 0;
+    }
+    .left-side hr {
+        width: 70%;
+    }
+    #lang {
+        width: 60%;
+        cursor: pointer;
+        position: absolute;
+        bottom: 5vh;
+    }
+    /* 왼쪽 측면 사이드 메뉴 */
+
+
+    /* 메인 게시판 영역 */
+    .right-side {
+        height: 75.15vh;
+        padding: 8vh 8vh;
+        box-sizing: border-box;
+        overflow: auto;
+        background-color: #efefef75;
+    }
+    .board-title {
+        letter-spacing: -2px;
+        font-weight: bold;
+        margin-left: 3px;
+    }
+    .form-area {
+        padding: 2vh 0 0;
+        box-sizing: border-box;
+        margin: 2.5vh auto;
+    }
+    .board-top-form {
+        margin-bottom: .6rem;
+        display: flex;
+        padding-left: 0;
+    }
+    .board-top-form select {
+        width: 15%;
+    }
+    .board-top-form input {
+        width: 15%;
+    }
+    .board-bottom-form {
+        margin-bottom: 2vh;
+    }
+    .board-bottom-form select {
+        width: 15%;
+    }
+    .board-bottom-form input {
+        width: 31%;
+    }
+    .board-bottom-form button {
+        width: 40px;
+        background-color: #fff;
+        box-shadow: 0 0 4px #ddd;
+    }
+    .board-middle {
+        margin: 2.5vh 0;
+        padding: 1vh;
+        box-sizing: border-box;
+        display: flex;
+    }
+    .board-middle p {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    .table-title {
+        background-color: #222;
+        color: #fff;
+    }
+    .pagination-container {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        margin-top: 3vh;
+    }
+    .pagination-container div {
+        display: flex;
+        align-items: center;
+    }
+    .pagination-container div button {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        box-shadow: 0 0 3px #ccc;
+    }
+    .pagination-container a {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .pagination {
+        --bs-pagination-color: #222;
+    }
+    .active>.page-link, .page-link.active {
+        background-color: #bbb;
+        border-color: #bbb;
+    }
+    /* 메인 게시판 영역 */
+
+
+    /* 푸터 영역 */
+    #footer {
+        background-color: #ccc;
+        font-size: .9rem;
+        padding: 4vh 0 6.2vh;
+        position: relative;
+        z-index: 1;
+    }
+    #footer ul {
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        color: #333;
+        letter-spacing: -1px;
+    }
+    #footer ul li:not(:last-child)::after {
+        content: "|";
+        margin: 0 10px;
+        color: #aaa;
+    }
+    /* 푸터 영역 */
+
+
+    /* 캘린더 수정 */
+    .flatpickr-calendar {
+        padding: 1rem;
+    }
+    .flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month {
+        top: .75rem;
+    }
+    .flatpickr-current-month input.cur-year {
+        padding-left: 2.2ch;
+    }
+    /* 캘린더 수정 */
+
+
+
+    /* 모달 팝업 수정 */
+    .modal-header,.modal-footer {
+        border: 0;
+    }
+    .modal-dialog {
+        height: 50%;
+        display: flex;
+        align-items: end;
+    }
+    .modal-header {
+        align-items: start;
+    }
+    .modal-title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        display: flex;
+        padding-top: 1rem;
+        margin-left: 1rem;
+    }
+    .modal-content {
+        padding: 1rem 1rem .5rem;
+    }
+    /* 모달 팝업 수정 */
+
+
+
+
+    
+    /* subpage */
+    .create-page form{
+        display: flex;
+        justify-content: space-between;
+        overflow: auto;
+        flex-wrap: wrap;
+    }
+    .create-page .col {
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+    .create-page div label {
+        position: relative;
+    }
+    .create-page div label:not(:last-child)::after {
+        position: absolute;
+        top: 0;
+        right: -8px;
+        content: '*';
+        color: #f00;
+    }
+    .create-page div .nation-name-kor::after,
+    .create-page div .nation-name-eng::after,
+    .create-page div .textarea::after
+    {
+        content: '' !important;
+    }
+    .subpage-btn {
+        display: flex;
+        justify-content: space-between;
+        padding: 5vh 2vh 1vh;
+    }
+    .subpage-btn button {
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 0 3px #ccc;
+    }
+    .subpage-btn button a {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .completed-write {
+        color: teal;
+    }
+
+    /* subPage 유효성 검사 CSS */
+
+    .valid  {
+        border: 1px solid green;
+        outline: 3px solid rgba(50, 116, 72, 0.2);
+    }
+    .invalid {
+        border: 1px solid red;
+        outline: 4px solid rgba(255,0,0, .2);
+    }
+    .invalid::placeholder {
+        color: rgb(199, 0, 0);
+        font-size: .8rem;
+    }

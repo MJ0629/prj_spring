@@ -7,22 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../resources/css/style.css">
+     <script src="https://kit.fontawesome.com/9ba187d4f0.js" crossorigin="anonymous"></script><!--폰트어썸-->
 </head>
 <body>
     <div class="all-wrap">
         <div class="leftSide">
             <nav class="sideNav">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-lock"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-desktop"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-icons"></i></a></li>
                 </ul>
             </nav>
             <h1 class="userName">YOONMIJIN</h1>
             <div class="userInfo">
                 <div class="userImage">
-                    image
                 </div>
                 <div class="userDesc">
                     <ul>
@@ -53,7 +53,7 @@
                     USER
                 </div>
                 <div class="adminPage">
-                    ADMIN
+                   <a href="loginForm" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;"> ADMIN</a>
                 </div>
             </div>
         </div>

@@ -21,12 +21,12 @@ a {text-decoration: none; color: inherit;}
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    background-color: #222;
+    background-color: #d9a9b6;
 }
 .sideNav {
     position: absolute;
     top: 50%;
-    left: 2rem;
+    left: 95%;
     transform: translateY(-50%);
 }
 .sideNav li {
@@ -37,6 +37,11 @@ a {text-decoration: none; color: inherit;}
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, .25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    
 }
 
 .userName {
@@ -54,12 +59,9 @@ a {text-decoration: none; color: inherit;}
 .userImage {
     width: 200px;
     height: 200px;
-    border: 1px solid #555;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #55555520;
+    background: url(../images/logo.png) no-repeat center;
+    background-size: 90%;
     margin-bottom: 2rem;
 }
 .userDesc {
@@ -124,4 +126,8 @@ a {text-decoration: none; color: inherit;}
 }
 .rightSideBottom div:hover {
     box-shadow: 5px 5px 10px rgba(0,0,0,.02) inset;
+}
+.loginForm {
+	align-items: center;
+	justify-content: center;
 }

@@ -2,6 +2,7 @@ package com.mycompany.app.home;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
@@ -80,5 +81,29 @@ public class HomeController {
 		return "app/home/home10";
 	}
 	
+	@RequestMapping(value ="/home11")
+	public ModelAndView home11() {
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("home11");
+		return mav;
+	}
+	@RequestMapping(value ="test")
+	public ModelAndView test() {
+		ModelAndView mav = new ModelAndView();
+		
+		mav.setViewName("/app/home/test");
+		return mav;
+	}
+	@RequestMapping(value="/loginForm")
+	public String login() {
+		
+		return "loginForm";
+	}
+	@RequestMapping(value="/memberList")
+	public String memberList() {
+		
+		return "memberList";
+	}
 	
 }
