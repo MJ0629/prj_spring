@@ -21,7 +21,8 @@ a {text-decoration: none; color: inherit;}
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    background-color: #d9a9b6;
+    background: url(../images/backgroundGrid.jpg) no-repeat center;
+    background-size: cover;
 }
 .sideNav {
     position: absolute;
