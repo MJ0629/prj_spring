@@ -105,5 +105,10 @@ public class HomeController {
 		
 		return "memberList";
 	}
+	@RequestMapping(value="/writeForm")
+	public String writeForm() {
+		
+		return "writeForm";
+	}
 	
 }

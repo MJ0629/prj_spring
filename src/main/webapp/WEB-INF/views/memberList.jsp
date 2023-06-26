@@ -210,8 +210,8 @@
 
                     <!-- 서브페이지 이동 버튼 -->
                     <div>
-                        <button class="btn"><a href="subpage.html"><i class="bi bi-file-earmark-plus"></i></a></button>
-                        <button class="btn"><a href="subpage.html"><i class="bi bi-plus-square-fill"></i></a></button>
+                        <button class="btn"><a href="/writeForm"><i class="bi bi-file-earmark-plus"></i></a></button>
+                        <button class="btn"><a href="/writeForm"><i class="bi bi-plus-square-fill"></i></a></button>
                     </div>
                 </nav>
 

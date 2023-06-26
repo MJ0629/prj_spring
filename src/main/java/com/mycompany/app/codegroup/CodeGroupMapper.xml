@@ -10,7 +10,18 @@
 		<!-- RESULTMAP=""이 RESULTMAP의 ID랑 연결 -->	
 			SELECT	*
 			FROM
-				abandonedDogClass
+				codeGroup
+			WHERE
+				name LIKE CONCAT('%',#{keyword},'%')
+		</select>  
+		  
+		<select id="selectOne" resultMap="resultMapObj">
+		<!-- RESULTMAP=""이 RESULTMAP의 ID랑 연결 -->	
+			SELECT	*
+			FROM
+				codeGroup
+			WHERE
+				seq = #{seq}
 		</select>    
 
 	</mapper>    
