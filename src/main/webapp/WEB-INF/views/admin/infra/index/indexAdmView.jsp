@@ -1,4 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -27,7 +33,7 @@
     <header class="container-fluid shadow d-flex align-items-center justify-content-lg-between p-0 pt-3 pb-3">
         <nav class="row navbar navbar-expand-lg container-fluid m-auto d-flex align-items-center justify-content-lg-between headerNav">
             <ul class="row m-auto col-8 p-0">
-                <li class="nav-item col-3"><a href="#" class="nav-link navbar-brand"><h1 class="fs-6 fw-bold p-0 m-0">MANAGEMENT PAGE</h1></a></li>
+                <li class="nav-item col-3"><a href="indexAdmView" class="nav-link navbar-brand"><h1 class="fs-6 fw-bold p-0 m-0">MANAGEMENT PAGE</h1></a></li>
                 <li class="nav-item col"><a href="#" class="nav-link">MENU</a></li>
                 <li class="nav-item col"><a href="#" class="nav-link">MENU</a></li>
                 <li class="nav-item col"><a href="#" class="nav-link">MENU</a></li>
@@ -210,8 +216,8 @@
 
                     <!-- 서브페이지 이동 버튼 -->
                     <div>
-                        <button class="btn"><a href="/writeForm"><i class="bi bi-file-earmark-plus"></i></a></button>
-                        <button class="btn"><a href="/writeForm"><i class="bi bi-plus-square-fill"></i></a></button>
+                        <button class="btn"><a href="/codeGroupForm"><i class="bi bi-file-earmark-plus"></i></a></button>
+                        <button class="btn"><a href="/codeGroupForm"><i class="bi bi-plus-square-fill"></i></a></button>
                     </div>
                 </nav>
 

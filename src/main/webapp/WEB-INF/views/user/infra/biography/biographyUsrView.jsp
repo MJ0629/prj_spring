@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../resources/css/style.css">
+    <link rel="stylesheet" href="../../../../../resources/css/style.css">
      <script src="https://kit.fontawesome.com/9ba187d4f0.js" crossorigin="anonymous"></script><!--폰트어썸-->
 </head>
 <body>
@@ -38,7 +38,7 @@
         <div class="rightSide">
             <div class="rightSideTop">
                 <div class="pageImage">
-                    <img src="../../resources/images/dogweb.PNG" alt="">
+                    <img src="../../../../resources/images/dogweb.PNG" alt="">
                 </div>
                 <div>
                     <p>
@@ -50,10 +50,14 @@
             </div>
             <div class="rightSideBottom">
                 <div class="userPage">
+                	<a href="loginUsrForm" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
                     USER
+                    </a>
                 </div>
                 <div class="adminPage">
-                   <a href="loginForm" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;"> ADMIN</a>
+                   <a href="loginAdmForm" style="width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+                   ADMIN
+                   </a>
                 </div>
             </div>
         </div>

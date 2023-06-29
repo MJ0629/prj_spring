@@ -1,8 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="rb" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -23,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
 
-    <link rel="stylesheet" href="../../resources/css/memberList.css">
+    <link rel="stylesheet" href="../../../../../resources/css/memberList.css">
 </head>
 <body>
     <div class="container-wrap">
@@ -32,7 +28,7 @@
         <header class="container-fluid shadow d-flex align-items-center justify-content-lg-between p-0 pt-3 pb-3">
             <nav class="row navbar navbar-expand-lg container-fluid m-auto d-flex align-items-center justify-content-lg-between headerNav">
                 <ul class="row m-auto col-8 p-0">
-                    <li class="nav-item col-3"><a href="#" class="nav-link navbar-brand"><h1 class="fs-6 fw-bold p-0 m-0">ABC MANAGEMENT SYSTEM</h1></a></li>
+                    <li class="nav-item col-3"><a href="indexAdmView" class="nav-link navbar-brand"><h1 class="fs-6 fw-bold p-0 m-0">ABC MANAGEMENT SYSTEM</h1></a></li>
                     <li class="nav-item col"><a href="#" class="nav-link">회원관리</a></li>
                     <li class="nav-item col"><a href="#" class="nav-link">서비스관리</a></li>
                     <li class="nav-item col"><a href="#" class="nav-link">사이트관리</a></li>
@@ -87,7 +83,7 @@
                     <div class="container-fluid form-area create-page">
 
                         <!-- 게시글 폼 -->
-                        <form class="needs-validation" novalidate name="formList">
+                        <form class="needs-validation" novalidate>
                             <div class="col">
                                 <label for="seq-input" class="form-label">Seq</label>
                                 <input class="form-control" type="text" placeholder="자동생성" aria-label="Disabled input example" disabled id="seq-input">
@@ -115,28 +111,14 @@
                                 <input type="number" class="form-control" id="num-form" placeholder="숫자(0~255)" required>
                             </div>
                             <div class="container-fluid subpage-btn">
-                            <button type="button" class="btn"><a href="/memberList"><i class="bi bi-list"></i></a></button>
-                            <button class="btn completed-write" type="submit" id="btn"><i class="bi bi-check2-circle"></i></button>
+                            <button type="button" class="btn"><a href="indexAdmView"><i class="bi bi-list"></i></a></button>
+                            <button class="btn completed-write" type="button"><a href="#"><i class="bi bi-check2-circle"></i></a></button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
             <!-- 메인 게시판 페이지 끝 -->
-            <c:choose>
-	<c:when test="${fn:length(list) eq 0}">
-		<tr>
-			<td class="text-center" colspan="9">There is no data!</td>
-		</tr>	
-	</c:when>
-	<c:otherwise>
-		<c:forEach items="${list}" var="list" varStatus="status">
-			<c:out value="${list.seq }"></c:out>
-			<c:out value="${list.name }"></c:out><br>
-		</c:forEach>
-	</c:otherwise>
-</c:choose>	  	
-
 
     </section>
     <!-- 메인 섹션 끝 -->
@@ -153,7 +135,8 @@
         </footer>
         <!-- 푸터 영역 끝 -->
     </div>
-    
+
+
     <!-- 스크립트 -->
     <script type="text/javascript">
         
@@ -245,12 +228,6 @@
                 });
 
             });
-        
-        $("#btn").on("click", function(){
-        	/* 자기 자신을 다시 한번 호출 해 준다. */
-        	$("form[name=formList]").attr("action", "/codeGroupList").submit();
-        	$("form[name=formList]").attr("method", "post");
-        });
     </script>
 </body>
 </html>
