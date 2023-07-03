@@ -83,7 +83,7 @@
         <div class="right-side col">
 
             <div class="m-auto board">
-                <h3 class="board-title">코드그룹리스트</h3>
+                <h3 class="board-title">공통코드리스트</h3>
                 <form class="container-fluid form-area" name="formList" method="post">
                     <!-- 검색창 -->
                     <div class="container-fluid board-top-form">
@@ -122,7 +122,7 @@
                         <th scope="col">#</th>
                         <th scope="col">seq</th>
                         <th scope="col">이름</th>
-                        <th scope="col">아이디</th>
+                        <th scope="col">코드그룹번호</th>
                         <th scope="col">비밀번호</th>
                         <th scope="col"></th>
                         <th scope="col"></th>
@@ -146,9 +146,12 @@
 							            	<c:out value="${list.seq}"></c:out>
 							            </td>
 							            <td>
-							            	<a href="/codeGroupForm?seq=<c:out value = '${list.seq}'/>">
+							            	<a href="/codeForm?seq=<c:out value = '${list.seq}'/>">
 							            	<c:out value="${list.name}"></c:out>
 							            	</a>
+							            </td>
+							            <td>
+							            	<c:out value="${list.codeGroup_seq}"></c:out>
 							            </td>
 							            <td></td>
 							            <td></td>
@@ -269,6 +272,7 @@
 	    
 	    $(".refresh_btn").on("click", function(){
 	    	$("form[name=formList]").attr("action", "/codeList").submit();
+	    	console.log("sdfsdfdf");
 	    });
     </script>
 </body>

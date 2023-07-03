@@ -100,7 +100,7 @@
 	                        <th scope="col">#</th>
 	                        <th scope="col">seq</th>
 	                        <th scope="col">이름</th>
-	                        <th scope="col">아이디</th>
+	                        <th scope="col">코드그룹번호</th>
 	                        <th scope="col">비밀번호</th>
 	                        <th scope="col"></th>
 	                        <th scope="col"></th>
@@ -115,7 +115,7 @@
 	                    	  <td></td>
 	             			  <td><input name="seq" id="seq" value="<c:out value="${param.seq}"/>" placeholder="자동생성"/></td>
 							  <td><input placeholder="name" name="name" id="name" value="<c:out value="${item.name}"/>"/></td>
-							  <td></td>
+							  <td><input placeholder="코드그룹seq" name="codeGroup_seq" id="codeGroup_seq" value="<c:out value="${item.codeGroup_seq}"/>"/></td>
 							  <td></td>
 							  <td></td>
 							  <td></td>

@@ -5,14 +5,15 @@
     
     <!-- 전체 매퍼 중 유일한 값을 사용해야 한다.
     해서 관계적으로 해당 파일의 path와 file_name(확장자 제외) 그리고dao에서 namespace와 일치하여야 한다 -->
-	<mapper namespace="com.mycompany.app.codegroup.CodeGroupMapper">
+	<mapper namespace="com.mycompany.app.code.CodeMapper">
 
 		<!-- select 결과를 받을 객체 -->
-	    <resultMap id="resultMapObj" type="com.mycompany.app.codegroup.CodeGroup"></resultMap>
+	    <resultMap id="resultMapObj" type="com.mycompany.app.code.Code"></resultMap>
 	    			
 	    <sql id="selectObj">
 	    		seq,
-	    		name
+	    		name,
+	    		codeGroup_seq
 	    </sql>			
 	    			
 		<!-- TYPE이 이클립스 DTO -->
@@ -21,40 +22,40 @@
 			SELECT
 				<include refid="selectObj" />
 			FROM
-				codeGroup
+				code
 			WHERE 1=1
 					<if test="shKeyword != null and !shKeyword.equals('')">
 					AND name
 					LIKE CONCAT('%', #{shKeyword}, '%')
 					</if>
 		</select>  
-		  
+	  
 		<select id="selectOne" resultMap="resultMapObj">
 		<!-- RESULTMAP=""이 RESULTMAP의 ID랑 연결 -->	
 			SELECT	
 				<include refid="selectObj" />
 			FROM
-				codeGroup
+				code
 			WHERE
 				seq = #{seq}
 		</select>
-		
 		<update id="update">
 			UPDATE 
-				codeGroup
+				code
 			SET
 				name = #{name}
+				codeGroup_seq = #{codeGroup_seq}
 			WHERE
 				seq = #{seq}
 		</update>
 		
 		<delete id="delete">
-			DELETE FROM codeGroup
+			DELETE FROM code
 			WHERE seq = #{seq}
 		</delete>
 		
 		<insert id="insert">
-			INSERT INTO codeGroup (
+			INSERT INTO code (
 				name
 				) VALUES (
 				#{name}

@@ -1,47 +1,49 @@
-package com.mycompany.app.codegroup;
+package com.mycompany.app.code;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-	@Service
-public class CodeGroupServiceImpl implements CodeGroupService {
+@Service
+public class CodeServiceImpl implements CodeService {
 	@Autowired
-	CodeGroupDao dao;
+	CodeDao dao;
 	
 	@Override
-	public List<CodeGroup> selectList(CodeGroup vo){return dao.selectList(vo);}
+	public List<Code> selectList(Code vo) {
+		// TODO Auto-generated method stub
+		return dao.selectList(vo);
+	}
 
 	@Override
-	public CodeGroup selectOne(CodeGroup vo) {
+	public Code selectOne(Code vo) {
 		// TODO Auto-generated method stub
 		return dao.selectOne(vo);
 	}
-//	
 
 	@Override
-	public int update(CodeGroup dto) {
+	public int update(Code dto) {
 		// TODO Auto-generated method stub
 		return dao.update(dto);
 	}
 
 	@Override
-	public int delete(CodeGroup dto) {
+	public int delete(Code dto) {
 		// TODO Auto-generated method stub
 		return dao.delete(dto);
 	}
 
 	@Override
-	public int insert(CodeGroup vo) {
+	public int uelete(Code dto) {
 		// TODO Auto-generated method stub
-		return dao.insert(vo);
+		return dao.uelete(dto);
 	}
 
 	@Override
-	public int uelete(CodeGroup dto) {
+	public int insert(Code dto) {
 		// TODO Auto-generated method stub
-		return dao.uelete(dto);
+		return dao.insert(dto);
 	}
 
 }

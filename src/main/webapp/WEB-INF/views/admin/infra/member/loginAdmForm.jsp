@@ -42,7 +42,7 @@
                             <input type="email" name="" id="login-id" placeholder="아이디(이메일)를 입력해주세요.">
                             <input type="password" name="" id="login-pw" placeholder="비밀번호를 입력해주세요.">
 
-                            <button type="submit" class="form-btn"><a href="indexAdmView" style="width:100%; height:100%; display:block;">로그인</a></button>
+                            <button type="submit" class="form-btn"><a href="/codeGroupList" style="width:100%; height:100%; display:block;">로그인</a></button>
                         </form>
                         <!-- 로그인 폼 -->
 

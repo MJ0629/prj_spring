@@ -1,13 +1,12 @@
-package com.mycompany.app.codegroup;
+package com.mycompany.app.code;
 
-public class CodeGroup {
-
+public class Code {
 	private Integer shOption;
 	private String shKeyword;
 	
 	private String seq;
 	private String name;
-	
+	private String codeGroup_seq;
 	
 	public Integer getShOption() {
 		return shOption;
@@ -36,7 +35,12 @@ public class CodeGroup {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
+	public String getCodeGroup_seq() {
+		return codeGroup_seq;
+	}
+	public void setCodeGroup_seq(String codeGroup_seq) {
+		this.codeGroup_seq = codeGroup_seq;
+	}
+
 	
 }
