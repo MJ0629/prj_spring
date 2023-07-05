@@ -2,8 +2,6 @@ package com.mycompany.app.code;
 
 import java.util.List;
 
-import com.mycompany.app.codegroup.CodeGroup;
-
 public interface CodeService {
 	public List<Code> selectList(Code vo);
 	public Code selectOne(Code vo);
