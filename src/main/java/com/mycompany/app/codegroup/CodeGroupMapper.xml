@@ -50,7 +50,8 @@
 		
 		<delete id="delete">
 			DELETE FROM codeGroup
-			WHERE seq = #{seq}
+			WHERE seq = #{seq},
+			name = #{name}
 		</delete>
 		
 		<insert id="insert">

@@ -43,7 +43,7 @@
 			UPDATE 
 				code
 			SET
-				name = #{name}
+				name = #{name},
 				codeGroup_seq = #{codeGroup_seq}
 			WHERE
 				seq = #{seq}
@@ -56,9 +56,11 @@
 		
 		<insert id="insert">
 			INSERT INTO code (
-				name
+				name,
+				codeGroup_seq
 				) VALUES (
-				#{name}
+				#{name},
+				#{codeGroup_seq}
 				)
 		</insert>
 	</mapper>    
